@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { useFetchData } from './useFetchData'; 
 
-const RICK_AND_MORTY_URL = "https://rickandmortyapi.com/api/character/";
+const RICK_AND_MORTY_URL = import.meta.env.VITE_RICK_AND_MORTY_URL;
 
 const getInitialFavorites = (key, defaultValue) => {
     if (typeof window !== 'undefined') {

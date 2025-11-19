@@ -5,7 +5,7 @@ const Header = ({ showFavorites, favoritesCount, onToggleView }) => {
             <div className="container mx-auto flex justify-between items-center">
                 <h1 className="text-3xl font-bold text-green-400 flex items-center">
                      <img
-                     src="../../public/images/iconrick.png"
+                     src="/images/iconrick.png"
                      alt="Icono de Rick"
                      className="w-8 h-8 mr-2"
                      />
