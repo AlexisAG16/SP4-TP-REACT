@@ -1,4 +1,3 @@
-
 const Header = ({ showFavorites, favoritesCount, onToggleView }) => {
     return (
         <header className="bg-gray-900 text-white p-4 shadow-xl border-b-4 border-green-500">

@@ -18,7 +18,7 @@ export const useAppLogic = () => {
     const [showFavorites, setShowFavorites] = useState(false);
     
     const [searchConfig, setSearchConfig] = useState({
-        mode: 'none', // 'none', 'combined'
+        mode: 'none',
         nameQuery: '',
         quantityQuery: 0,
     });
