@@ -18,7 +18,7 @@ export const useAppLogic = () => {
     const [showFavorites, setShowFavorites] = useState(false);
     
     const [searchConfig, setSearchConfig] = useState({
-        mode: 'none',
+        mode: 'none', // 'none', 'combined'
         nameQuery: '',
         quantityQuery: 0,
     });
@@ -77,3 +77,5 @@ export const useAppLogic = () => {
         handleToggleFavorite,
     };
 };
+
+    // setFavoritos([]);

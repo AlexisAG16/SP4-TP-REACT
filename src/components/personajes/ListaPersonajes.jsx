@@ -3,19 +3,14 @@ import CardPersonajes from './CardPersonajes';
 
 const ListaPersonajes = ({ personajes, favoritos, onToggleFavorite, loading, error }) => {
     
-    // useMemo
     const memoizedPersonajes = useMemo(() => personajes, [personajes]);
-
-    if (loading) {
-        return <p className="text-center text-xl text-green-400 mt-8">Cargando personajes...</p>;
-    }
 
     if (error) {
         return <p className="text-center text-xl text-red-500 mt-8">{error}</p>;
     }
 
-    if (memoizedPersonajes.length === 0) {
-        return <p className="text-center text-xl text-gray-500 mt-8">Usa el formulario para buscar por nombre o ID.</p>;
+    if (memoizedPersonajes.length === 0 && !loading) {
+        return <p className="text-center text-xl text-gray-500 mt-8">Usa el formulario para buscar por nombre y límite.</p>;
     }
 
     const isPersonajeFavorite = (id, source) => favoritos.some(fav => fav.id === id && fav.source === source);

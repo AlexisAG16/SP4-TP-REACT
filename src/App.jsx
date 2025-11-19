@@ -1,12 +1,12 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FormularioBusqueda from './components/personajes/FormularioBusqueda';
 import ListaPersonajes from './components/personajes/ListaPersonajes';
 import ListaFavoritos from './components/favoritos/ListaFavoritos';
-import { useAppLogic } from './hooks/useAppLogic';
+import LoadingSpinner from './components/LoadingSpinner';
+import { useAppLogic } from './hooks/useAppLogic'; 
 
 function App() {
     const {
@@ -23,7 +23,6 @@ function App() {
         handleSearch,
         handleToggleView,
         handleToggleFavorite,
-
     } = useAppLogic();
     
     const getSubtitleText = () => {
@@ -81,6 +80,8 @@ function App() {
             </main>
 
             <Footer />
+            
+            {loading && <LoadingSpinner />}
         </div>
     );
 }
